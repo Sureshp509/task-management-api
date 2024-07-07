@@ -26,7 +26,7 @@ const typeDefs = gql`
   type Query {
     getOrganizations: [Organization]
     getUsers: [User]
-    getTasks: [Task]
+    getTasks(status: String, dueDate: String): [Task]
   }
 
   type Mutation {
@@ -36,6 +36,19 @@ const typeDefs = gql`
     updateTask(id: ID!, title: String, description: String, status: String, dueDate: String): Task
     deleteTask(id: ID!): String
   }
+
+  type TaskStats {
+    status: String
+    count: Int
+}
+
+type Query {
+    getOrganizations: [Organization]
+    getUsers: [User]
+    getTasks(status: String, dueDate: String): [Task]
+    getTaskStats: [TaskStats]
+}
+
 `;
 
 module.exports = typeDefs;
