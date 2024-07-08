@@ -19,7 +19,7 @@ This repository contains a task management API built using Express.js, MongoDB, 
   npm install
 
 3. **Set environment variables:**
-    Create a .env file in the root directory and add the following variables:
+    Create a .env file in the root directory and change the following variables:
 
     PORT=3000
     MONGODB_URI=mongodb://localhost:27017/task_management_db
@@ -27,7 +27,7 @@ This repository contains a task management API built using Express.js, MongoDB, 
 
 4. **Start the server:**
     cd src
-    npm start
+    node index.js
 
 
 
